@@ -4,11 +4,11 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "dev": "vite",
+        "dev": "concurrently \"vite\" \"npm run dev --prefix ../server\"",
         "build": "tsc && vite build",
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
-        "start": "concurrently \"npm run dev\" \"npm run start --prefix ../server\""
+        "start": "npm run dev"
     },
     "dependencies": {
         "@uiw/codemirror-extensions-color": "^4.21.21",
