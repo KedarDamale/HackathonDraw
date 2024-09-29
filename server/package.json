@@ -1,16 +1,13 @@
 {
-	"name": "code-sync-server",
+	"name": "hackathondraw",
 	"version": "1.0.0",
 	"description": "",
 	"main": "dist/server.js",
 	"scripts": {
-		"dev": "nodemon --exec ts-node src/server.ts",
-		"start": "node dist/server.js",
-		"build": "tsc"
+		"dev": "nodemon --exec ts-node src/server.ts", 
+		"start": "node dist/server.js", 
+		"build": "tsc"  
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
 	"dependencies": {
 		"cors": "^2.8.5",
 		"dotenv": "^16.3.1",

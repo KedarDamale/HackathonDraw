@@ -1,14 +1,14 @@
 {
-    "name": "code-sync-client",
+    "name": "hackathondraw",
     "private": true,
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "dev": "concurrently \"vite\" \"npm run dev --prefix ../server\"",
-        "build": "tsc && vite build",
+        "dev": "vite",  
+        "build": "vite build", 
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview",
-        "start": "npm run dev"
+        "preview": "vite preview",  
+        "start": "vite"  
     },
     "dependencies": {
         "@uiw/codemirror-extensions-color": "^4.21.21",
