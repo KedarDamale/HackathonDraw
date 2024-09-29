@@ -1,32 +1,14 @@
-import { defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
-import { fileURLToPath, URL } from "url"
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [react()],
-    build: {
-        chunkSizeWarningLimit: 1600,
-        rollupOptions: {
-            output: {
-                manualChunks(id) {
-                    if (id.includes("node_modules")) {
-                        return id
-                            .toString()
-                            .split("node_modules/")[1]
-                            .split("/")[0]
-                            .toString()
-                    }
-                },
-            },
-        },
-    },
-    resolve: {
-        alias: [
-            {
-                find: "@",
-                replacement: fileURLToPath(new URL("./src", import.meta.url)),
-            },
-        ],
-    },
-})
+  plugins: [react()],
+  server: {
+    host: true, // Allow access from any IP address
+    port: parseInt(process.env.PORT || '3000', 10), // Ensure the port is a number
+    strictPort: true, // Prevent Vite from trying another port if the specified port is busy
+  },
+  build: {
+    outDir: 'dist', // Specify the output directory for the build
+  },
+});
