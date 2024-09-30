@@ -32,6 +32,22 @@
 			.time {
 				color: #888;
 			}
+			/* Button styles */
+			.button {
+				background-color: #39e079; /* Primary button color */
+				color: #212429;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				font-size: 1rem;
+				text-decoration: none;
+				display: inline-block;
+				transition: background-color 0.3s ease;
+			}
+			.button:hover {
+				background-color: #2f9b5c; /* Darker hover color */
+			}
 		</style>
 	</head>
 	<body>
@@ -43,11 +59,13 @@
 					to go!
 				</p>
 				<p class="time">Current Time: <span id="currentTime"></span></p>
+				<!-- Button to access frontend -->
+				<a href="https://hackathondraw.vercel.app/" class="button">Access Frontend</a>
 			</div>
 		</div>
 		<script>
 			document.getElementById("currentTime").innerText =
-				new Date().toLocaleTimeString()
+				new Date().toLocaleTimeString();
 		</script>
 	</body>
 </html>
